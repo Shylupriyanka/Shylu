@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     div.exe1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-direction: reverse;  
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+div.exe2 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-direction: reverse;  
+}
+
+@keyframes example2 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+ div{
+  width:100px;
+  height:50px;
+   background-color: aqua;
+   font-weight:bold;
+   position:relative;
+   animation:mymove 5s infinite ;
+ }
+   #div1{
+    animation-timing-function:linear ;
+   }
+    #div2{
+      animation-timing-function:ease;
+    }
+    #div3{
+      animation-timing-function:ease-in;
+    }
+    #div4{
+      animation-timing-function:ease-in-out;
+    }
+    #div2{
+      animation-timing-function:ease-out;
+    }
+   
+   @keyframes mymove{
+      from {
+        left:0px;
+      }
+      to{
+        left:200px;
+      }
+   }
+   </style>
+   </head>
+   <body>
+    <div class="exe1">hello</div><br>
+    <div class="exe2">hai</div><br>
+
+    <div id="div1">linear</div><br>
+    <div id="div2">ease</div><br>
+    <div id="div3">ease-in</div>
+    <div id="div4">ease-in-out</div>
+    <div id="div5">ease-out</div>
+    
+   </body>
+  </html>
