@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button  {
+        position: absolute;
+        left: 200px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <input type="password" id="n1">
+    <button onclick="h1()">show</button>
+    <script>
+        var a1=document.querySelector("#n1");
+        console.log(   a1.type==="password");
+        function h1() {
+           if(a1.type==="password"){
+        a1.type="text";
+           }
+
+        }
+    </script>
+    <br><br>
+     <input type="password" id="n2">
+     <button class= "" button onclick="h1()">show</button>
+     <script>
+         var a1=document.querySelector("#n2");
+         var btn=document.querySelector("#n2")
+         console.log(   a1.type==="password");
+         function h1() {
+            if(a1.type==="password"){
+         a1.type="text";
+            }
+ 
+         }
+     </script>
+     <br><br>
+
+     <button>Hii</button>
+     <script>
+        var v1=document.querySelector("button");
+        console.log(v1);
+       v1.innerHTML+=("Everyone");
+        v1.innerHTML+="ABC";
+             </script>
+             <br>
+             <br>
+     
+<input type="password" id="n1">
+<button class="m1" onclick="h1()">show</button>
+<script>
+    var a1=document.querySelector("#n1");
+    var btn=document.querySelector(".m1");
+    console.log(  a1.type==="password");
+    function h1() {
+        if(a1.type==="password") {
+        a1.type="text";
+        btn.innerHTML="hide";
+        }
+        else {
+            a1.type="password";
+            btn.innerHTML="show";
+        }
+    }
+    
+</script>
+</body>
+</html>
