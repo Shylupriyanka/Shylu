@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock-Paper-Scissors</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+.game-container {
+	width: 400px;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-options {
+	margin-bottom: 20px;
+}
+
+.game-options button {
+	width: 100px;
+	height: 50px;
+	margin: 10px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.game-options button:hover {
+	background-color: #3e8e41;
+}
+
+.game-result {
+	margin-top: 20px;
+}
+
+.game-result p {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+        </style>
+</head>
+<body>
+	<div class="game-container">
+		<h1>Rock-Paper-Scissors</h1>
+		<div class="game-options">
+			<button id="rock">Rock</button>
+			<button id="paper">Paper</button>
+			<button id="scissors">Scissors</button>
+		</div>
+		<div class="game-result">
+			<p id="user-choice"></p>
+			<p id="computer-choice"></p>
+			<p id="result"></p>
+		</div>
+	</div>
+
+	<script src="script.js">
+        const rockButton = document.getElementById('rock');
+const paperButton = document.getElementById('paper');
+const scissorsButton = document.getElementById('scissors');
+
+// Get game result elements
+const userChoiceElement = document.getElementById('user-choice');
+const computerChoiceElement = document.getElementById('computer-choice');
+const resultElement = document.getElementById('result');
+
+// Function to generate computer choice
+function getComputerChoice() {
+	const choices = ['rock', 'paper', 'scissors'];
+	return choices[Math.floor(Math.random() * choices.length)];
+}
+
+// Function to determine game result
+function determineResult(userChoice, computerChoice) {
+	if (userChoice === computerChoice) {
+		return 'It\'s a tie!';
+	} else if (
+		(userChoice === 'rock' && computerChoice === 'scissors') ||
+		(userChoice === 'paper' && computerChoice === 'rock') ||
+		(userChoice === 'scissors' && computerChoice === 'paper')
+	) {
+		return 'You win!';
+	} else {
+		return 'You lose!';
+	}
+}
+
+// Add event listeners to game options buttons
+rockButton.addEventListener('click', () => {
+	const computerChoice = getComputerChoice();
+	userChoiceElement.innerText = 'You chose: rock';
+	computerChoiceElement.innerText = 'Computer chose: ' + computerChoice;
+	resultElement.innerText = determineResult('rock', computerChoice);
+});
+
+paperButton.addEventListener('click', () => {
+	const computerChoice = getComputerChoice();
+	userChoiceElement.innerText = 'You chose: paper';
+	computerChoiceElement.innerText = 'Computer chose: ' + computerChoice;
+	resultElement.innerText = determineResult('paper', computerChoice);
+});
+
+scissorsButton.addEventListener('click', () => {
+	const computerChoice = getComputerChoice();
+	userChoiceElement.innerText = 'You chose: scissors';
+	computerChoiceElement.innerText = 'Computer chose: ' + computerChoice;
+	resultElement.innerText = determineResult('scissors', computerChoice);
+});
+    </script>
+</body>
+</html>
+
