@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Health and Wellness</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+header {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#home {
+	background-image: linear-gradient(to bottom, #4CAF50, #8BC34A);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+#about {
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+}
+
+#services {
+	background-color: #f9f9f9;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+
+#contact {
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+}
+
+footer {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px;
+	border-top: 1px solid #ddd;
+}
+        </style>
+</head>
+<body>
+	<!-- Header Section -->
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- Hero Section -->
+	<section id="home">
+		<h1>Healthy Living, Happy Life!</h1>
+		<p>Discover our wellness programs and services.</p>
+		<button>Learn More</button>
+	</section>
+	
+	<!-- About Section -->
+	<section id="about">
+		<h1>About Us</h1>
+		<p>We are dedicated to providing holistic wellness solutions.</p>
+		<img src="https://th.bing.com/th/id/OIP.A4hbOyeDZ88GUX5IKX5W7QHaEo?w=196&h=183&c=7&r=0&o=5&pid=1.7" alt="Wellness Image">
+	</section>
+	
+	<!-- Services Section -->
+	<section id="services">
+		<h1>Our Services</h1>
+		<ul>
+			<li>Yoga and Meditation</li>
+			<li>Nutrition Counseling</li>
+			<li>Massage Therapy</li>
+			<li>Health Coaching</li>
+		</ul>
+	</section>
+	
+	<!-- Contact Section -->
+	<section id="contact">
+		<h1>Get in Touch</h1>
+		<p>Email: info@wellness.com</p>
+		<p>Phone: 555-555-5555</p>
+		<form>
+			<input type="name" placeholder="Name">
+			<input type="email" placeholder="Email">
+			<textarea placeholder="Message"></textarea>
+			<button>Send</button>
+		</form>
+	</section>
+	
+	<!-- Footer Section -->
+	<footer>
+		<p>&copy; 2023 Health and Wellness</p>
+	</footer>
+	
+	<script src="script.js">
+        // Add event listener to form submission
+document.querySelector('form').addEventListener('submit', (e) => {
+	e.preventDefault();
+	
+	// Get form data
+	const name = document.querySelector('input[name="name"]').value;
+	const email = document.querySelector('input[name="email"]').value;
+	const message = document.querySelector('textarea').value;
+	
+	// Send data to server or email service
+	console.log({ name, email, message });
+});
+
+    </script>
+</body>
+</html>
