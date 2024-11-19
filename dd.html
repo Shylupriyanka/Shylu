@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz Website</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+.quiz-container {
+	width: 600px;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+	margin-bottom: 20px;
+}
+
+.question h2 {
+	margin-top: 0;
+}
+
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+label {
+	margin-right: 20px;
+}
+
+button[type="submit"] {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #3e8e41;
+}
+
+.results {
+	margin-top: 20px;
+}
+
+#score {
+	font-size: 24px;
+	font-weight: bold;
+}
+        </style>
+
+</head>
+<body>
+	<div class="quiz-container">
+		<h1>Quiz Time!</h1>
+		<form>
+			<div class="question">
+				<h2>What is the capital of France?</h2>
+				<input type="radio" id="paris" name="q1" value="paris">
+				<label for="paris">Paris</label>
+				<input type="radio" id="london" name="q1" value="london">
+				<label for="london">London</label>
+				<input type="radio" id="berlin" name="q1" value="berlin">
+				<label for="berlin">Berlin</label>
+			</div>
+			
+			<div class="question">
+				<h2>Who painted the Mona Lisa?</h2>
+				<input type="radio" id="leonardo" name="q2" value="leonardo">
+				<label for="leonardo">Leonardo da Vinci</label>
+				<input type="radio" id="picasso" name="q2" value="picasso">
+				<label for="picasso">Pablo Picasso</label>
+				<input type="radio" id="van-gogh" name="q2" value="van-gogh">
+				<label for="van-gogh">Vincent van Gogh</label>
+			</div>
+
+			<div class="question">
+				<h2>Who is the Father Of computer?</h2>
+				<input type="radio" id="charles Babbage" name="q3" value="charles Babbage">
+				<label for="charles Babbage">charles Babbage</label>
+				<input type="radio" id="colas babbage" name="q3" value="colas babbage">
+				<label for="colas babbage">colas babbage</label>
+				<input type="radio" id="jamson " name="q3" value="jamson">
+				<label for="jamson">jamson</label>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+		
+		<div class="results">
+			<h2>Results:</h2>
+			<p id="score"></p>
+		</div>
+	</div>
+	
+	<script>
+        
+  
+  
+    // Get form and results elements
+const form = document.querySelector('form');
+const results = document.querySelector('.results');
+const scoreElement = document.getElementById('score');
+
+// Add event listener to form submission
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	
+	// Get user answers
+	const q1Answer = document.querySelector('input[name="q1"]:checked').value;
+	const q2Answer = document.querySelector('input[name="q2"]:checked').value;
+	const q3Answer = document.querySelector('input[name="q3"]:checked').value;
+	// Calculate score
+	let score = 0;
+	if (q1Answer === 'paris') score++;
+	if (q2Answer === 'leonardo') score++;
+    if (q3Answer === 'charles Babbage') score++;
+	
+	// Display results
+	scoreElement.innerText = `You scored ${score} out of 3!`;
+	results.style.display = 'block';
+});
+
+    </script>
+</body>
+</html>
