@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-commerce Website</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+.container {
+	width: 800px;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+	background-color: skyblue;
+	color: #fff;
+	padding: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+
+.product {
+	background-color: #f9f9f9;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+}
+
+.product h3 {
+	margin-top: 0;
+}
+
+button {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+footer {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px;
+	border-top: 1px solid #ddd;
+}
+
+
+        </style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>E-commerce Website</h1>
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section id="home">
+			<h2>Welcome to our E-commerce Website!</h2>
+			<p>Explore our latest products and offers.</p>
+			<button>Shop Now</button>
+		</section>
+		
+		<section id="products">
+			<h2>Our Products</h2>
+			<div class="product-grid">
+				<div class="product">
+					<img src="https://th.bing.com/th/id/OIP.q6n-YMZg3sylBdfYUKTTZAHaEt?w=285&h=180&c=7&r=0&o=5&pid=1.7" alt="Product 1">
+					<h3>Product 1</h3>
+					<p>$19.99</p>
+					<button>Buy Now</button>
+				</div>
+				<div class="product">
+					<img src="https://th.bing.com/th/id/OIP.1Wgw0HCgTpE96JkXQK0rAwHaHa?w=196&h=197&c=7&r=0&o=5&pid=1.7" alt="Product 2">
+					<h3>Product 2</h3>
+					<p>$29.99</p>
+					<button>Buy Now</button>
+				</div>
+				<div class="product">
+					<img src="https://wallpaperaccess.com/full/2593068.jpg" alt="Product 3">
+					<h3>Product 3</h3>
+					<p>$39.99</p>
+					<button>Buy Now</button>
+				</div>
+			</div>
+		</section>
+		
+		<section id="about">
+			<h2>About Us</h2>
+			<p>We are a team of passionate entrepreneurs dedicated to providing high-quality products.</p>
+		</section>
+		
+		<section id="contact">
+			<h2>Contact Us</h2>
+			<p>Email: tgtwurjc(g)asifabad@gmail.com</p>
+			<p>Phone: 9876864324</p>
+		</section>
+		
+		<footer>
+			<p>&copy; 2023 E-commerce Website</p>
+		</footer>
+	</div>
+</body>
+</html>
