@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0" />
+    <title>Expanding Cards</title>
+    <style>
+        /* Setting container to flex and width to 80% of view port */
+.container{
+    display: flex;
+    width: 80%;
+}
+/*Adding background image to each section*/
+.one{
+    background: url('https://wallpaperaccess.com/full/284553.jpg');
+}
+.two{
+    background: url('https://th.bing.com/th/id/R.802b078377376eced6dd727752c1fabd?rik=zWGtGpfbAz9TWQ&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f5%2f5%2f1%2f355875.jpg&ehk=Wsz0%2bG%2f8gQuqTD%2bBDSJTPsnJh01d80JAq%2f1g%2f6GnHK4%3d&risl=&pid=ImgRaw&r=0');
+}
+.three{
+    background: url('https://th.bing.com/th/id/R.5b66599850f8ece694e3bacd370cf350?rik=iLEvYOe45BQJLg&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2016%2f01%2fnature-wallpapers-33.jpg&ehk=LqJF3nuptAfVGIyyZ%2bU%2fpYSqJKK1kH3frrjr5xpc%2byo%3d&risl=&pid=ImgRaw&r=0');
+}
+.four{
+    background: url('https://wallpapercave.com/wp/wp6374897.jpg');
+}
+/* Background properties and transition effect to section  */
+.section{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    cursor: pointer;
+    flex: 0.2;
+    margin:8px;
+    position: relative;
+    transition: all 0.7s ease-out;
+} 
+
+/* section with active class will grow flex to 3 times  */
+.section.active{
+    flex: 3;
+}
+
+    </style>
+  </head>
+  <body>
+    
+    <!-- Container -->
+    <div class="container">
+      
+      <!-- Div with section and active -->
+      <div class="section one active"></div>
+      
+      <!-- All another div with section -->
+      <div class="section two"></div>
+      <div class="section three"></div>
+      <div class="section four"></div>
+    </div>
+<script>// Selecting all sections with class of section
+    const sections = document.querySelectorAll('.section')
+    
+    // On click event for each section 
+    sections.forEach((section)=>{
+        section.addEventListener('click',()=>{
+        // remove active class from all another section 
+        // and add it to the selected section
+            sections.forEach((section) => {
+                section.classList.remove('active')
+            })
+            section.classList.add('active')
+        })
+    }) 
+    </script>
+  </body>
+</html>
